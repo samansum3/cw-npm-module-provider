@@ -1,0 +1,7 @@
+allprojects {
+    plugins.withId("com.liferay.node") {
+        node.global = true
+        node.nodeUrl = "https://nodejs.org/dist/v20.9.0/node-v20.9.0-linux-x64.tar.gz"
+        node.npmVersion = "10.4.0"
+    }
+}
