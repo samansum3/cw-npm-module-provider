@@ -1,0 +1,6 @@
+Bundle-Name: cw-vuejs-provider
+Bundle-SymbolicName: cw-vuejs-provider
+Bundle-Version: 1.0.0
+Web-ContextPath: /cw-vuejs-provider
+-includeresource: package.json
+-fixupmessages: Classes found in the wrong directory: ...;is:=warning

@@ -1,0 +1,39 @@
+{
+	"dump-report": true,
+    "exclude": {
+        "vue": ["src/**/*"],
+        "axios": ["lib/**/*", "dist/*", "!dist/axios.min.js"],
+        "dragula": ["dist/*", "example/*", "resources/*", "test/*", "!dist/dragula.min.js", "!dist/dragula.min.css"],
+        "vuelidate": ["src/**/*"],
+        "libphonenumber-js": ["source/**/*", "bin/**/*", "bundle/**/*"],
+        "resolve": true,
+        "hooper": ["tests/**/*", "dist/hooper.esm.js"],
+        "vuex": ["dist/*", "type/*", "!dist/vuex.min.js"],
+        "v-click-outside": ["*","!package.json", "!dist/*", "!src/*"],
+        "riophae/vue-treeselect": ["*", "!dist/vue-treeselect.min.css", "!dist/vue-treeselect.cjs.min.js"]
+    },
+    "rules": [
+        {
+            "test": "\\.css$",
+            "use": ["style-loader"]
+        }
+    ],
+	"max-parallel-files": 1,
+    "packages": {
+        "*": {
+            ".babelrc": {
+                "presets": ["liferay-standard"],
+                "comments": false,
+                "minified": true
+            }
+        },
+        "libphonenumber-js": {
+            ".babelrc": {
+                "comments": false,
+                "plugins": [["inline-json-import", {}]],
+                "presets": ["liferay-standard"],
+                "minified": true
+            }
+        }
+    }
+}
